@@ -1,0 +1,9 @@
+For the alpha value 0.001 the accuracy is 0.9683
+For the alpha value 0.01 the accuracy is 0.963
+For the alpha value 0.1 the accuracy is 0.9722
+For the alpha value 0.2 the accuracy is 0.9737
+For the alpha value 0.8 the accuracy is 0.9682
+
+
+
+Maximum score is 0.9737
