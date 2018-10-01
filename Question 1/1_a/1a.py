@@ -1,3 +1,4 @@
+#import
 import os
 import h5py
 import struct
@@ -8,7 +9,7 @@ from random import shuffle
 from matplotlib import pyplot
 from sklearn.model_selection import train_test_split
 
-
+#NN implementation based on Sigmoid activation
 class Network(object):
     def __init__(self, sizes):
         self.num_layers = len(sizes)
@@ -22,7 +23,7 @@ class Network(object):
         for b, w in zip(self.biases, self.weights):
             a = sigmoid(np.dot(w, a) + b)
         return a
-
+    #stocastic gradient implemtation 
     def SGD(self, training_data, epochs, mini_batch_size, eta,
             test_data=None):
         if test_data: n_test = len(test_data)
@@ -77,7 +78,7 @@ class Network(object):
             nabla_b[-l] = delta
             nabla_w[-l] = np.dot(delta, activations[-l - 1].transpose())
         return (nabla_b, nabla_w)
-
+    #evaluation in terms of accuracy
     def evaluate(self, test_data):
         test_results = [(np.argmax(self.feedforward(x)), y)
                         for (x, y) in test_data]
